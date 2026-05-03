@@ -150,6 +150,7 @@ restando 6 cuando el nibble correspondiente produce un valor inválido
 después de la resta binaria.
 
 ### Operaciones realizadas
+```
 Caso 1: 73h - 28h = 4Bh  ← nibble bajo B > 9, inválido
 DAS → AL = 45h   ← BCD correcto (73 - 28 = 45)
 Caso 2: 20h - 01h = 1Fh  ← nibble bajo F > 9, inválido
@@ -157,7 +158,7 @@ DAS → AL = 19h   ← BCD correcto (20 - 01 = 19)
 
 ### Resultado
 DAS OK: 45
-
+```
 ---
 
 ## Checkpoint 5 — Mini Calculadora MUL/DIV (`p2c.asm`)
@@ -171,9 +172,10 @@ mediante la subrutina `imprimirAX` (división repetida por 10 con
 apilamiento de dígitos en la pila).
 
 ### Lógica de conversión ASCII ↔ binario
+```
 ASCII '7' = 37h  →  37h - 30h = 07h (binario)
 Binario 56 = 38h →  38h / 10 = digitos '5' y '6' (ASCII)
-
+```
 ### Instrucciones utilizadas
 | Instrucción | Operación | Registros |
 |-------------|-----------|-----------|
@@ -186,10 +188,11 @@ Si el divisor es cero, se imprime el mensaje de error y se omite
 la instrucción `DIV` para evitar la excepción de la CPU.
 
 ### Casos de prueba y resultados
+```
 7 * 7 → Resultado: 49
 9 / 3 → Resultado: 3
 5 / 0 → Division por cero.
-
+```
 ---
 
 ## Capturas de Pantalla
