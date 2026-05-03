@@ -64,6 +64,7 @@ registros (`DX:AX`). La suma de dos números de 32 bits requiere dos pasos:
 automáticamente el acarreo `CF` generado por el `ADD`.
 
 ### Operación realizada
+```
 A = 0x0001FFFF  (DX=0001h, AX=FFFFh)
 B = 0x00010001  (CX=0001h, BX=0001h)
 ─────────────────────────────────
@@ -71,7 +72,7 @@ ADD AX, BX → FFFFh + 0001h = 0000h, CF=1
 ADC DX, CX → 0001h + 0001h + CF = 0003h
 ─────────────────────────────────
 Resultado: DX:AX = 0003:0000h = 196608 decimal
-
+```
 ### Registros involucrados
 | Registro | Rol |
 |----------|-----|
@@ -95,6 +96,7 @@ propagando el bit de préstamo desde la resta de las partes bajas hacia
 las partes altas.
 
 ### Operación realizada
+```
 A = 0x00030000  (DX=0003h, AX=0000h)
 B = 0x00010001  (CX=0001h, BX=0001h)
 ─────────────────────────────────
@@ -102,7 +104,7 @@ SUB AX, BX → 0000h - 0001h = FFFFh, CF=1 (préstamo)
 SBB DX, CX → 0003h - 0001h - CF = 0001h
 ─────────────────────────────────
 Resultado: DX:AX = 0001:FFFFh = 131071 decimal
-
+```
 ### Registros involucrados
 | Registro | Rol |
 |----------|-----|
